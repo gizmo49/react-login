@@ -1,0 +1,70 @@
+@import "./master";
+
+html {
+    position: relative;
+    height: auto !important;
+}
+
+html,
+body {
+    font-family: $primary_font_family;
+    color: #000000;
+    max-width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    background-image:  radial-gradient(#000 0.5px, transparent 0.5px), radial-gradient(#000 0.5px, #f6f6f6d4 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+}
+
+#root, section {
+    height: 100%;
+}
+
+.login__card {
+    background: #fff;
+    border: 2px solid #000000;
+    padding: 30px;
+    .action__wrapper {
+        min-height: 400px;
+    }
+}
+
+.toggle {
+    width: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-bottom: 20px;
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+ul.pattern__list {
+    padding-left: 0;
+    margin-bottom: 2rem;
+    li {
+        list-style: none;
+        span {
+            font-size: 13px;
+        }
+    }
+}
+.remark {
+    margin-top: 10px;
+    font-size: 13px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.progress {
+    margin-right: 2px;
+    .progress-bar {
+        background-color: #06a106;
+        transition: all 1s;
+    }
+}

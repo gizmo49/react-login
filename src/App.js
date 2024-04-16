@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import SignIn from "./components/auth/SignIn/SignIn";
+import { InfoProvider } from "./components/auth/SignIn/hooks/InfoContext";
+import { PasswordRulesProvider } from "./components/auth/SignIn/hooks/PasswordRules";
+import "./assest/scss/_index.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PasswordRulesProvider>
+        <InfoProvider>
+          <SignIn />
+        </InfoProvider>
+      </PasswordRulesProvider>
+    </>
   );
 }
 
